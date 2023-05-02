@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/6b037c9e5a.js" crossorigin="anonymous"></script>
+    	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="main.js" defer></script>
+        <link href="style.css" rel="stylesheet" id="ron">
+    </head>
+<body>
+    <div id="actions-div">
+        <div id="actions-warp">
+            <div id="actions-title">Withdraw Money</div>
+            <input name="input"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            type = "number"
+            maxlength = "6"
+            />
+            <div id="buttons-warp">
+                <span class="btn accept" id="acceptBtn"></span>
+                <span class="btn cancel" id="cancelBtn">Cancel</span>
+            </div>
+        </div>
+        <div id="actions-warp-transfer">
+            <div id="actions-title">Transfer Money</div>
+            <div style="display: flex; justify-content: space-evenly;">
+                <input name="inputT"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type = "number"
+                    maxlength = "6"
+                />
+                <input name="inputI"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    type = "number"
+                    maxlength = "4"
+                    placeholder="ID"
+                />
+            </div>
+            <div id="buttons-warp">
+                <span class="btn accept" id="acceptBtnT">Transfer</span>
+                <span class="btn cancel" id="cancelBtnT">Cancel</span>
+            </div>
+        </div>
+    </div>
+    <div id="bank-main-container">
+        <div id="bank-main-title">
+            <img src="logo.png" class="logo">
+            <span id="title-text">INDOPUBLIC Bank</span>
+            <span id="title-name"></span>
+        </div>
+        <div id="bank-main-personal-info">
+            <div class="presonal-info">
+                <div class="title">Current bank balance</div>
+                <div id="bankVelue" class="info">0$</div>
+            </div>
+            <div class="presonal-info">
+                <div class="title">Bank ID</div>
+                <div id="idVelue" class="info">1</div>
+            </div>
+            <div class="presonal-info">
+                <div class="title">Current cash balance</div>
+                <div id="cashVelue" class="info">0$</div>
+            </div>
+        </div>
+        <div id="bank-menu-options">
+            <div class="options-info">
+                <div id="options-title">Deposit</div>
+                <div class="options-icon"><i class="fas fa-money-bill-alt"></i></div>
+                <div data-option="Deposit" class="options-button"><i class="fas fa-arrow-circle-right"></i></div>
+            </div>
+            <div class="options-info">
+                <div id="options-title">Withdraw</div>
+                <div class="options-icon"><i class="fas fa-wallet"></i></div>
+                <div data-option="Withdraw" class="options-button"><i class="fas fa-arrow-circle-right"></i></div>
+
+            </div>
+            <div class="options-info">
+                <div id="options-title">Transfer</div>
+                <div class="options-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="options-buttonT transferBtn"><i class="fas fa-arrow-circle-right"></i></div>
+            </div>
+        </div>
+        <hr>
+        <div id="quick-actions-title-widthdraw">Quick Withdraw</div>
+        <div id="bank-main-quick-actions">
+            <div class="quick-widthdraw">
+                <div data-wit="1000" class="quick-widthdraw2">1000$</div>
+            </div>
+            <div class="quick-widthdraw">
+                <div data-wit="2500" class="quick-widthdraw2">2500$</div>
+            </div>
+            <div class="quick-widthdraw">
+                <div data-wit="10000" class="quick-widthdraw2">10,000$</div>
+            </div>
+            <div class="quick-widthdraw">
+                <div data-wit="100000" class="quick-widthdraw2">100,000$</div>
+            </div>
+        </div>
+        <div id="quick-actions-title-deposit">Quick Deposit</div>
+        <div id="bank-main-quick-actions-dep">
+            <div class="quick-deposit">
+                <div data-dep="1000" class="quick-deposit2">1000$</div>
+            </div>
+            <div class="quick-deposit">
+                <div data-dep="2500" class="quick-deposit2">2500$</div>
+            </div>
+            <div class="quick-deposit">
+                <div data-dep="10000" class="quick-deposit2">10,000$</div>
+            </div>
+            <div class="quick-deposit">
+                <div data-dep="100000" class="quick-deposit2">100,000$</div>
+            </div>
+        </div>
+        <div id="exit">exit</div>
+    </div>
+</body>
+</html>    
+
+
